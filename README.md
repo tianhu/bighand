@@ -93,3 +93,7 @@ Start service
 systemctl enable strongswan  
 systemctl start strongswan
 ```
+
+## Setup IPSec VPN clients
+
+WIP...
