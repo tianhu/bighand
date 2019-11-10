@@ -51,19 +51,22 @@ openssl pkcs12 -export -inkey private/clientKey.pem -in certs/clientCert.pem -na
 Edit /etc/ipsec.conf
 ```
 vi /etc/ipsec.conf
-> Copy the content of ipsec.conf from this git repository.
 ```
+> Copy the content of ipsec.conf from this git repository.
+
 
 Edit /etc/ipsec.secrets  
 ```
 vi /etc/ipsec.secrets
-> Copy the content of ipsec.secrets from this git repository. Change \<pre-shared-key\>, \<username\> and \<password\> as you like.
-ipsec rereadsecrets
 ```
+> Copy the content of ipsec.secrets from this git repository. Change pre-shared-key, username and password as you like.
+ipsec rereadsecrets
+
 
 Edit  /etc/strongswan.conf  
 ```
 vi /etc/strongswan.conf
+```
 > Add below lines. It should look like strongswan.conf from this git repository.
 > 
 > duplicheck.enable = no
@@ -72,18 +75,19 @@ vi /etc/strongswan.conf
 > nbns1 = 8.8.8.8
 > nbns2 = 8.8.4.4
 > 
-```
+
 
 Configure network  
 ```
 vi /etc/sysctl.conf
+```
 > uncomment below lines.
 > 
 > net.ipv4.ip_forward = 1
 > net.ipv4.conf.all.accept_redirects = 0
 > net.ipv4.conf.all.send_redirects = 0
 > 
-
+```
 sysctl -p  
 iptables -A INPUT -p udp --dport 500 --j ACCEPT  
 iptables -A INPUT -p udp --dport 4500 --j ACCEPT  
