@@ -48,26 +48,26 @@ ipsec pki --pub --in private/clientKey.pem --type rsa | ipsec pki --issue --life
 openssl pkcs12 -export -inkey private/clientKey.pem -in certs/clientCert.pem -name "CityTiger VPN client certificate" -certfile cacerts/caCert.pem -caname "CityTiger CA" -out client.p12
 ```
 
-Edit /etc/ipsec.conf
+Edit `/etc/ipsec.conf`
 ```
 vi /etc/ipsec.conf
 ```
-> Copy the content of ipsec.conf from this git repository.
+> Copy the content of `ipsec.conf` from this git repository.
 
 
-Edit /etc/ipsec.secrets  
+Edit `/etc/ipsec.secrets`
 ```
 vi /etc/ipsec.secrets
 ```
-> Copy the content of ipsec.secrets from this git repository. Change pre-shared-key, username and password as you like.
+> Copy the content of `ipsec.secrets` from this git repository. Change `<pre-shared-key>`, `<username>` and `<password>` as you like.
 ipsec rereadsecrets
 
 
-Edit  /etc/strongswan.conf  
+Edit  `/etc/strongswan.conf`
 ```
 vi /etc/strongswan.conf
 ```
-> Add below lines. It should look like strongswan.conf from this git repository.
+> Add below lines. It should look like `strongswan.conf` from this git repository.
 > ```
 > duplicheck.enable = no
 > dns1 = 8.8.8.8
@@ -77,7 +77,7 @@ vi /etc/strongswan.conf
 > ```
 
 
-Configure network  
+Configure network
 ```
 vi /etc/sysctl.conf
 ```
