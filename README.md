@@ -68,13 +68,13 @@ Edit  /etc/strongswan.conf
 vi /etc/strongswan.conf
 ```
 > Add below lines. It should look like strongswan.conf from this git repository.
-> 
+> ```
 > duplicheck.enable = no
 > dns1 = 8.8.8.8
 > dns2 = 8.8.4.4
 > nbns1 = 8.8.8.8
 > nbns2 = 8.8.4.4
-> 
+> ```
 
 
 Configure network  
@@ -82,11 +82,12 @@ Configure network
 vi /etc/sysctl.conf
 ```
 > uncomment below lines.
-> 
+> ```
 > net.ipv4.ip_forward = 1
 > net.ipv4.conf.all.accept_redirects = 0
 > net.ipv4.conf.all.send_redirects = 0
-> 
+> ```
+
 ```
 sysctl -p  
 iptables -A INPUT -p udp --dport 500 --j ACCEPT  
