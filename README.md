@@ -60,8 +60,9 @@ Edit `/etc/ipsec.secrets`
 vi /etc/ipsec.secrets
 ```
 > Copy the content of `ipsec.secrets` from this git repository. Change `<pre-shared-key>`, `<username>` and `<password>` as you like.
+```
 ipsec rereadsecrets
-
+```
 
 Edit  `/etc/strongswan.conf`
 ```
