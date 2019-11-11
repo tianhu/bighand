@@ -2,7 +2,7 @@
 
 # Setup IKEv2 IPSec VPN with StrongSwan
 
-A setp by step tutorial to set up IPSec VPN cover L2TP and IKEv2 with StrongSwan.
+A setp by step tutorial to set up an IKEv2 IPSec VPN on Ubuntu 1804 with StrongSwan.
 
 ## Setup IPSec VPN server
 
